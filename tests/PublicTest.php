@@ -45,6 +45,16 @@ final class PublicTest extends TestCase
         $ticket->añadir("pizza");
         $ticket->añadir("pasta");
         $this->assertEquals(18, $ticket->sumaPrecio);
-    }   
+    }
+    /**
+     * @test
+     */
+    public function testAñadirVariosPlatosIguales(): void
+    {
+        $ticket = new Ticket();
+        $ticket->añadir("pizza");
+        $ticket->añadir("pizza");
+        $this->assertEquals(20, $ticket->sumaPrecio);
+    }
 }
 ?>
