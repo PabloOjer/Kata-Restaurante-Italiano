@@ -1,8 +1,8 @@
 <?php
 
-namespace Deg540\CleanCodeKata9\Rules;
+namespace Deg540\CleanCodeKata9\Rule;
 
-class ExistePlato implements Rule
+class ExistePlato
 {
     public function existePlato(string $dish): bool
     {

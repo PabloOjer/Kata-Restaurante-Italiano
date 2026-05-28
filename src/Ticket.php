@@ -6,7 +6,7 @@ use Deg540\CleanCodeKata9\Menu;
 
 class Ticket
 { 
-    private int $sumaPrecio = 0;
+    public int $sumaPrecio = 0;
     private $menu;
     
     public function __construct()
@@ -17,7 +17,12 @@ class Ticket
 
     public function añadir (string $platos): bool
     {
-        return($this->menu->getPrice($platos) != null);
+        $precio = $this->menu->getPrice($platos);
+        if($precio !== null){
+            $this->sumaPrecio += $precio;
+            return true;
+        }
+        return false;
     }
 }
 ?>
