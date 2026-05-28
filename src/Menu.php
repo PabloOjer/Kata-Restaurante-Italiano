@@ -5,7 +5,9 @@ namespace Deg540\CleanCodeKata9;
 use Deg540\CleanCodeKata9\Rule\ExistePlato;
 
 class Menu
-{    
+{
+    private $platos = ["pizza" => 10, "pasta" => 8, "ensalada" => 5];
+
     public function __construct()
     {
     }
