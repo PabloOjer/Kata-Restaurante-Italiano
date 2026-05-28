@@ -34,7 +34,7 @@ final class PublicTest extends TestCase
     {
         $ticket = new Ticket();
         $result = $ticket->añadir("hamburguesa");
-        $this->assertFalse($result);
+        $this->assertEquals("El plato seleccionado no existe en el menú",$result);
     }
 }
 ?>
