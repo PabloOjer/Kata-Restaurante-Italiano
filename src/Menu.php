@@ -3,19 +3,19 @@
 namespace Deg540\CleanCodeKata9;
 
 use Deg540\CleanCodeKata9\Menu;
+use Deg540\CleanCodeKata9\Interface;
 
-class Ticket
+class Menu
 { 
-    private int $sumaPrecio = 0;
     private $platos = array();
     
     public function __construct()
     {
     }
 
-    public function añadir (string $platos, int $precio): bool
+    public function getPrice(string $dish): ?float
     {
-        return true;
+        return null;
     }
 }
 ?>
