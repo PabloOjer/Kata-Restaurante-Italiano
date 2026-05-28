@@ -15,7 +15,11 @@ class Menu
 
     public function getPrice(string $dish): ?float
     {
+        if($existePlato($dish)){
+            return true;
+        }
         return null;
+        
     }
 }
 ?>
