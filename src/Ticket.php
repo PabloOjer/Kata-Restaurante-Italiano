@@ -7,6 +7,7 @@ use Deg540\CleanCodeKata9\Menu;
 class Ticket
 {
     public int $sumaPrecio = 0;
+    private $comanda = [];
     private $menu;
     
     public function __construct()
@@ -15,12 +16,13 @@ class Ticket
 
     }
 
-    public function añadir (string $platos): bool
+    public function añadir (string $platos): string
     {
         $precio = $this->menu->getPrice($platos);
         if($precio !== null){
             $this->sumaPrecio += $precio;
-            return true;
+            $this->comanda[] = $platos;
+            return "$platos" . " x" . count(array_keys($this->comanda, $platos)) . " | Total: " . number_format($this->sumaPrecio, 2);
         }
         return "El plato seleccionado no existe en el menú";
     }
