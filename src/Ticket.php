@@ -5,7 +5,7 @@ namespace Deg540\CleanCodeKata9;
 use Deg540\CleanCodeKata9\Menu;
 
 class Ticket
-{ 
+{
     public int $sumaPrecio = 0;
     private $menu;
     
@@ -22,7 +22,7 @@ class Ticket
             $this->sumaPrecio += $precio;
             return true;
         }
-        return false;
+        return "El plato seleccionado no existe en el menú";
     }
 }
 ?>
