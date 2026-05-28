@@ -14,7 +14,7 @@ final class PublicTest extends TestCase
     {
         $ticket = new Ticket();
         $result = $ticket->añadir("pizza");
-        $this->assertTrue($result);
+        $this->assertEquals("pizza x1 | Total: 10.00", $result);
     }
 
     /**
