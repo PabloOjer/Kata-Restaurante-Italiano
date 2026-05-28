@@ -13,7 +13,7 @@ final class PublicTest extends TestCase
     public function testAñadirPlato(): void
     {
         $ticket = new Ticket();
-        $result = $ticket->añadir();
+        $result = $ticket->añadir("pizza", 10);
         $this->assertTrue($result);
     }
 }
