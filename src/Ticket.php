@@ -17,7 +17,7 @@ class Ticket
 
     public function añadir (string $platos): bool
     {
-        return($this->menu->getPrice($platos) == null);
+        return($this->menu->getPrice($platos) != null);
     }
 }
 ?>

@@ -4,10 +4,11 @@ namespace Deg540\CleanCodeKata9;
 
 use Deg540\CleanCodeKata9\Menu;
 use Deg540\CleanCodeKata9\Interface;
+use Deg540\CleanCodeKata9\Rules\ExistePlato;
 
 class Menu
 { 
-    private $platos = array();
+    private $platos = ["pizza" => 10, "pasta" => 8, "ensalada" => 5];
     
     public function __construct()
     {
@@ -15,11 +16,10 @@ class Menu
 
     public function getPrice(string $dish): ?float
     {
-        if($existePlato($dish)){
-            return true;
-        }
-        return null;
-        
+        $existePlato = new ExistePlato();
+        if(existePlato->existePlato($dish)){
+            return $this->platos[$dish];
+        }        
     }
 }
 ?>
